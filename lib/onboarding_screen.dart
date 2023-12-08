@@ -2,6 +2,7 @@ import 'package:YATI/fap_welcome_page.dart';
 import 'package:YATI/intro_pages/Intro1.dart';
 import 'package:YATI/intro_pages/Intro2.dart';
 import 'package:YATI/intro_pages/Intro3.dart';
+import 'package:YATI/welcome_page.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
@@ -53,7 +54,7 @@ class _OnboardScreenState extends State<OnboardScreen> {
                           context,
                           MaterialPageRoute(
                               builder: (context) =>
-                                  faq()
+                                  WelcomePage()
                                   )
                                   );
                         }, child: Text("Skip"), 
@@ -66,7 +67,7 @@ class _OnboardScreenState extends State<OnboardScreen> {
           ElevatedButton(
             onPressed: () {
               Navigator.push(context, MaterialPageRoute(builder: (context){
-                return faq();
+                return WelcomePage();
             },
           )
           );},

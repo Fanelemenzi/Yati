@@ -82,7 +82,7 @@ class faq extends StatelessWidget {
                         context,
                         MaterialPageRoute(
                             builder: (context) =>
-                                judicial()
+                                Judicial()
                                 )
                                 );
                   tileColor: Colors.brown.shade50;

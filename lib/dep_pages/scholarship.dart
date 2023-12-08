@@ -26,33 +26,32 @@ class Scholarship extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Scaffold(
-        appBar: AppBar (
-            title: Text("Scholarship FAQ"),
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text("Home Affiars FAQs"),
           ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: ListView.builder(
-            itemCount: questions.length,
-            itemBuilder: ((context, index) {
-              final question = questions[index] ['question'];
-              final answer = questions[index] ['answer'];
-              return ExpansionTile(
-                title: Text(question!, style: TextStyle(
-                  fontSize: 15, fontWeight: FontWeight.bold, 
-                ),),
+        body: ListView.separated(
+          itemCount:questions.length,
+          itemBuilder: (BuildContext context, int index ){
+            final question = questions[index] ['question'];
+            final answer = questions[index] ['answer'];
+              return Card(
+                child: ExpansionTile(
+                  backgroundColor: Colors.black,
+                   title: Text(question!, style: TextStyle(
+                    fontSize: 15, fontWeight: FontWeight.bold, ),),
                 children: [
-                  Padding (
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(answer!),
-                  )
-                ], 
-              );
-
-            }),
+                     Padding (
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(answer!),
+                      )
+                ],
+                ),
+                );
+          }, 
+          separatorBuilder:  (BuildContext context, int index)=>const Divider(height: 3, color: Colors.white,),
           ),
         ),
-      )
     );
   }
 }
