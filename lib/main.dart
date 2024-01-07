@@ -1,4 +1,6 @@
 import 'package:YATI/onboarding_screen.dart';
+import 'package:YATI/opening_screen.dart';
+import 'package:YATI/welcome_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.black
       ),
-      home: const OnboardScreen()
+      home: SplashScreen()
     );
   }
 }
