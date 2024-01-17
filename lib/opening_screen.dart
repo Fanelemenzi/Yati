@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     super.initState();
     SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersive);
 
-    Future.delayed(Duration(seconds: 60), () {
+    Future.delayed(Duration(seconds: 6), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (_)=> WelcomePage() )
         );
@@ -45,9 +45,10 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            SizedBox(height: 20,),
-            Text(
+          children: [
+            Image.asset("assets/yati2.png"),
+            const SizedBox(height: 20,),
+            const Text(
               "Welcome To Yati", style: TextStyle(
                 fontStyle: FontStyle.normal,
                 color: Colors.white,
