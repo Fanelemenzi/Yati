@@ -36,6 +36,7 @@ class Scholarship extends StatelessWidget {
     return Container(
         child: Scaffold(
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             title: Text("Home Affiars FAQs"),
           ),
         body: ListView.separated(

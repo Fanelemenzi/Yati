@@ -61,6 +61,7 @@ class Commerce extends StatelessWidget {
     return Container(
         child: Scaffold(
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             backgroundColor: Colors.black,
             title: Text("Home Affiars FAQs"),
           ),
