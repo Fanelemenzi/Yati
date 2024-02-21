@@ -1,16 +1,7 @@
 # yati
 
-A new Flutter project.
+**INTRODUCTION**
+Yati is an information application designed to provide information on services provided by the Eswatini Government Departments and Parastals. THis will allow Emaswati to make decision and plan accordingly without having to travel to Governement offices only to be sent back becuase they didnt have the neccessary documents. Information is structured in a Freqently Asked Questions fomrat where commonly asked questions on Governement service are answered.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+**Development Environment**
+This project is built using **Flutter 3.7.3**, **Dart Tool 2.19.2** and SDK version - **2.19.2 <3.0.0**
