@@ -42,6 +42,7 @@ final questions = [
         child: Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: false,
+            backgroundColor: Colors.black,
             title: Text("Home Affiars FAQs"),
           ),
         body: ListView.separated(
@@ -52,12 +53,15 @@ final questions = [
               return Card(
                 child: ExpansionTile(
                   backgroundColor: Colors.black,
-                   title: Text(question!, style: TextStyle(
-                    fontSize: 15, fontWeight: FontWeight.bold, ),),
+                   title: Text(question!, style: const TextStyle(
+                    fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white ),),
                 children: [
                      Padding (
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(answer!),
+                        child: Text(answer!, style: const TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.normal, color: Colors.white
+                        ),
+                        ),
                       )
                 ],
                 ),

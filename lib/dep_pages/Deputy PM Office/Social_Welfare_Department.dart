@@ -1,43 +1,32 @@
 import 'package:flutter/material.dart';
 
-class Scholarship extends StatelessWidget {
-  Scholarship({super.key});
+class SocialWelfare extends StatelessWidget {
+     SocialWelfare({Key? key}) : super(key: key);
 
   final questions = [
     {
-      'question': 'What services available in Tinkhundla centers?',
+      'question': 'what is flutter',
       'answer': 'Flutter is a mobile app development framwork created by Google. It allows developers to build natively compiled applications',
     },
     {
-      'question' : 'Can you apply for ID at your Inkhundla center?',
+      'question' : 'How much do you need to regrister your business with commernce and get certificate of incoporation? ',
       'answer' : 'To fully regrister your business with the Eswatini Government, you need E1 200 ?'
     },
     {
-      'question' : 'How can a citizen of Inkhundla use resources and services available at Tinkhundla centers?',
-       'answer' : 'To regrister your business, you will need a certifed copy of your ID, business goals, share division'
-    },
-     {
-      'question' : 'Who can apply for the Regional Development Fund?',
-       'answer' : 'To regrister your business, you will need a certifed copy of your ID, business goals, share division'
-    },
-    {
-      'question' : 'What the required documents for The Regional Development Fund application?',
-       'answer' : 'To regrister your business, you will need a certifed copy of your ID, business goals, share division'
-    },
-    {
-      'question' : 'Who works at Tinkhundla centers?',
+      'question' : 'What are the required documents needed by Ministry of Commerce to regrister your business?',
        'answer' : 'To regrister your business, you will need a certifed copy of your ID, business goals, share division'
     }
   ];
 
 
- @override
+@override
   Widget build(BuildContext context) {
     return Container(
         child: Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            title: Text("Home Affiars FAQs"),
+            backgroundColor: Colors.black,
+            title: Text("Social Welfare FAQs"),
           ),
         body: ListView.separated(
           itemCount:questions.length,
@@ -47,12 +36,15 @@ class Scholarship extends StatelessWidget {
               return Card(
                 child: ExpansionTile(
                   backgroundColor: Colors.black,
-                   title: Text(question!, style: TextStyle(
-                    fontSize: 15, fontWeight: FontWeight.bold, ),),
+                   title: Text(question!, style: const TextStyle(
+                    fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white ),),
                 children: [
                      Padding (
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(answer!),
+                        child: Text(answer!, style: const TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.normal, color: Colors.white
+                        ),
+                        ),
                       )
                 ],
                 ),

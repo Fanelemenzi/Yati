@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class Commerce extends StatelessWidget {
-     Commerce({Key? key}) : super(key: key);
+class LiquorDepartment extends StatelessWidget {
+     LiquorDepartment({Key? key}) : super(key: key);
 
   final questions = [
     {
@@ -63,7 +63,7 @@ class Commerce extends StatelessWidget {
           appBar: AppBar(
             automaticallyImplyLeading: false,
             backgroundColor: Colors.black,
-            title: Text("Home Affiars FAQs"),
+            title: Text("Liqour Department FAQs"),
           ),
         body: ListView.separated(
           itemCount:questions.length,
@@ -75,7 +75,7 @@ class Commerce extends StatelessWidget {
                 child: ExpansionTile(
                   backgroundColor: Colors.black,
                    title: Text(question!, style: const TextStyle(
-                    fontSize: 12, fontWeight: FontWeight.bold, color: Colors.white ),),
+                    fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white ),),
                 children: [
                      Padding (
                         padding: const EdgeInsets.all(8.0),

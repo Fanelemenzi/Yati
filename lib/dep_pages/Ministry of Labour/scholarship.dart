@@ -29,7 +29,8 @@ class Scholarship extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            title: Text("Home Affiars FAQs"),
+            backgroundColor: Colors.black,
+            title: Text("Scholarship FAQs"),
           ),
         body: ListView.separated(
           itemCount:questions.length,
@@ -39,12 +40,15 @@ class Scholarship extends StatelessWidget {
               return Card(
                 child: ExpansionTile(
                   backgroundColor: Colors.black,
-                   title: Text(question!, style: TextStyle(
-                    fontSize: 15, fontWeight: FontWeight.bold, ),),
+                   title: Text(question!, style: const TextStyle(
+                    fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white ),),
                 children: [
                      Padding (
                         padding: const EdgeInsets.all(8.0),
-                        child: Text(answer!),
+                        child: Text(answer!, style: const TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.normal, color: Colors.white
+                        ),
+                        ),
                       )
                 ],
                 ),
