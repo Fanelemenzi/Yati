@@ -37,8 +37,12 @@ class VocationalTraining extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            backgroundColor: Colors.black,
-            title: Text("Industrial and Vocational Training FAQs"),
+            backgroundColor: Colors.indigo.shade900,
+            title: Text("Industrial and Vocational Training FAQs",
+             style: TextStyle(
+          fontSize: 22,
+        ),
+        ),
           ),
         body: ListView.separated(
           itemCount:questions.length,

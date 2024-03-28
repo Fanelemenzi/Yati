@@ -26,7 +26,11 @@ class SocialWelfare extends StatelessWidget {
           appBar: AppBar(
             automaticallyImplyLeading: false,
             backgroundColor: Colors.indigo.shade900,
-            title: Text("Social Welfare FAQs"),
+            title: Text("Social Welfare FAQs",
+             style: TextStyle(
+          fontSize: 22,
+        ),
+            ),
           ),
         body: ListView.separated(
           itemCount:questions.length,

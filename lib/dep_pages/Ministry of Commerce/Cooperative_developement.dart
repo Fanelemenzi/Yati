@@ -37,8 +37,12 @@ class CooperativeDevelopment extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            backgroundColor: Colors.black,
-            title: Text("Cooperative Development Department FAQs"),
+            backgroundColor: Colors.indigo.shade900,
+            title: Text("Cooperative Development Department FAQs",
+             style: TextStyle(
+          fontSize: 22,
+        ),
+            ),
           ),
         body: ListView.separated(
           itemCount:questions.length,

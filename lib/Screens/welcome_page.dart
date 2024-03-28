@@ -111,7 +111,7 @@ class _WelcomePageState extends State<WelcomePage> {
         backgroundColor: Colors.indigo.shade900,
         title: const Text("Government Departments",
         style: TextStyle(
-          fontSize: 20,
+          fontSize: 22,
         ),
         ),
       ),

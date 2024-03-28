@@ -42,8 +42,12 @@ final questions = [
         child: Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            backgroundColor: Colors.black,
-            title: Text("Home Affiars FAQs"),
+            backgroundColor: Colors.indigo.shade900,
+            title: Text("Home Affiars FAQs",
+             style: TextStyle(
+          fontSize: 22,
+        ),
+            ),
           ),
         body: ListView.separated(
           itemCount:questions.length,

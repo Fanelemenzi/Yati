@@ -29,8 +29,12 @@ class Scholarship extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            backgroundColor: Colors.black,
-            title: Text("Scholarship FAQs"),
+            backgroundColor: Colors.indigo.shade900,
+            title: Text("Scholarship FAQs",
+             style: TextStyle(
+          fontSize: 22,
+        ),
+            ),
           ),
         body: ListView.separated(
           itemCount:questions.length,

@@ -63,7 +63,11 @@ class RegristrarCompanies extends StatelessWidget {
           appBar: AppBar(
             automaticallyImplyLeading: false,
             backgroundColor: Colors.indigo.shade900,
-            title: Text("Regristrar of Companies FAQs"),
+            title: Text("Regristrar of Companies FAQs",
+             style: TextStyle(
+          fontSize: 22,
+        ),
+            ),
           ),
         body: ListView.separated(
           itemCount:questions.length,
