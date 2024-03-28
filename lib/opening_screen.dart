@@ -1,5 +1,6 @@
 
-import 'package:YATI/welcome_page.dart';
+import 'package:YATI/Screens/welcome_page.dart';
+import 'package:YATI/navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 

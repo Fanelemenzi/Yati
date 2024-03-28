@@ -1,3 +1,6 @@
+import 'package:YATI/Screens/about.dart';
+import 'package:YATI/Screens/most_used.dart';
+import 'package:YATI/Screens/profile.dart';
 import 'package:YATI/dep_pages/Ministry%20of%20Agriculture/vet_livestock_production.dart';
 import 'package:YATI/dep_pages/Ministry%20of%20Commerce/Cooperative_developement.dart';
 import 'package:YATI/dep_pages/Ministry%20of%20Commerce/Liquor_department.dart';
@@ -5,12 +8,38 @@ import 'package:YATI/dep_pages/Ministry%20of%20Home%20Affairs/home_affairs.dart'
 import 'package:YATI/dep_pages/Ministry%20of%20Commerce/regristrar_of_companies.dart';
 import 'package:YATI/dep_pages/Ministry%20of%20Labour/Industrial_and_Vacational_training.dart';
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
-import 'dep_pages/Deputy PM Office/Social_Welfare_Department.dart';
-import 'dep_pages/Ministry of Labour/scholarship.dart';
+import '../dep_pages/Deputy PM Office/Social_Welfare_Department.dart';
+import '../dep_pages/Ministry of Labour/scholarship.dart';
 
-class WelcomePage extends StatelessWidget {
+class WelcomePage extends StatefulWidget {
   WelcomePage({Key? key}) : super(key: key);
+
+  @override
+  State<WelcomePage> createState() => _WelcomePageState();
+}
+
+class _WelcomePageState extends State<WelcomePage> {
+  //this selected index is to control the bottom nav bar
+          int _selectedIndex = 0;
+
+        //this method will update our selected index
+          void navigateBottomBar(int index){
+            setState(() {
+              _selectedIndex= index;
+            });
+          }
+
+        
+            //Pages to display
+          final List<Widget> _pages = [
+           WelcomePage(),
+           AboutPage(),
+           MostUsedPage(),
+           ProfilePage()
+
+          ];
 
   final departments = [
     "Regristrar of Companies",
@@ -31,6 +60,7 @@ class WelcomePage extends StatelessWidget {
     const Icon(Icons.open_in_new),
     const Icon(Icons.open_in_new),
   ];
+
   final ministries = [
     "Ministry of Commerce Industry & Trade",
     "Ministry of Home Affairs",
@@ -46,12 +76,47 @@ class WelcomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: Container(
+        color: Colors.indigo.shade900,
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          child: GNav(
+            backgroundColor: Colors.indigo.shade900,
+            color: Colors.white,
+            activeColor:Colors.white,
+            tabBackgroundColor: Colors.amber.shade700,
+            gap: 8,
+            onTabChange: (index) {
+              
+            },
+            padding: EdgeInsets.all(16),
+            tabs: const [
+                GButton(icon: Icons.home,
+                text: "Home",
+                ),
+                GButton(icon: Icons.list,
+                text: "Most Used",
+                ),
+                GButton(icon: Icons.info,
+                text: "About"
+                ),
+                GButton(icon: Icons.person,
+                text: "Profile"
+                )
+            ]
+          ),
+        ),
+      ),
       appBar: AppBar(
-        backgroundColor: Colors.grey.shade900,
-        title: const Text("Government Departments"),
+        backgroundColor: Colors.indigo.shade900,
+        title: const Text("Government Departments",
+        style: TextStyle(
+          fontSize: 20,
+        ),
+        ),
       ),
       drawer: Drawer(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.indigo.shade900,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children:[
@@ -114,7 +179,10 @@ class WelcomePage extends StatelessWidget {
                 isExpanded: true,
                 iconEnabledColor: Colors.white,
                 hint:  Text(
-                  "Select A department"
+                  "Select a department",
+                  style: TextStyle(
+                    color: Colors.white
+                  ),
                 ),
                 items:<String>[
                   'Home Affairs/Civil Regristration',
@@ -128,7 +196,13 @@ class WelcomePage extends StatelessWidget {
                   ].map((String value){
                   return DropdownMenuItem(
                     value: value,
-                    child: Text(value),
+                    child: Text(value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 17
+                    ),
+                    ),
                 );
                 }
                 ).toList(),
@@ -192,15 +266,19 @@ class WelcomePage extends StatelessWidget {
                 return GestureDetector(
                     child: Card(
                         child: ListTile(
-                            tileColor: Colors.black,
+                            tileColor: Colors.amber.shade700,
                             
                             title: Text(
                               departments[index],
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(color: Colors.black,
+                              fontSize: 17, fontWeight: FontWeight.bold
+                              ),
                             ),
                             subtitle: Text(
                               ministries[index],
-                              style: TextStyle(color: Colors.grey),
+                              style: TextStyle(color: Colors.black,
+                              fontSize: 15, 
+                              ),
                             ),
                             onTap: () {
                               if (currentItem == "Regristrar of Companies") {
@@ -257,7 +335,7 @@ class WelcomePage extends StatelessWidget {
           const SizedBox(height: 10,),
 
           Text(
-            "Choose The Department",
+            "Choose a Department",
             style: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold
@@ -271,13 +349,18 @@ class WelcomePage extends StatelessWidget {
            padding:  EdgeInsets.only(left: 5, right: 5, top: 0, bottom: 0),
             child: Container(
               decoration: BoxDecoration(
-                color: Colors.white
+                color: Colors.amber.shade700
               ),
               child: DropdownButton<String>(
-                dropdownColor: Colors.grey.shade500,
+                dropdownColor: Colors.white,
                 isExpanded: true,
                 hint:  Text(
-                  "Select A department"
+                  "Select a department",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 17
+                  ),
                 ),
                 items:<String>[
                   'Home Affairs/Civil Regristration',
@@ -291,7 +374,13 @@ class WelcomePage extends StatelessWidget {
                   ].map((String value){
                   return DropdownMenuItem(
                     value: value,
-                    child: Text(value),
+                    child: Text(value,
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 17
+                    ),
+                    ),
                 );
                 }
                 ).toList(),
@@ -305,7 +394,6 @@ class WelcomePage extends StatelessWidget {
           )
         ],
       ),
-    
     );
   }
 }

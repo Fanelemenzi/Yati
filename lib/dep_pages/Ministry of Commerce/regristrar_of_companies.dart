@@ -62,7 +62,7 @@ class RegristrarCompanies extends StatelessWidget {
         child: Scaffold(
           appBar: AppBar(
             automaticallyImplyLeading: false,
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.indigo.shade900,
             title: Text("Regristrar of Companies FAQs"),
           ),
         body: ListView.separated(
@@ -71,16 +71,17 @@ class RegristrarCompanies extends StatelessWidget {
             final question = questions[index] ['question'];
             final answer = questions[index] ['answer'];
               return Card(
-                color: Colors.black,
+                color: Colors.white,
                 child: ExpansionTile(
-                  backgroundColor: Colors.black,
+                  collapsedBackgroundColor: Colors.amber.shade600,
+                  collapsedTextColor: Colors.black,
                    title: Text(question!, style: const TextStyle(
-                    fontSize: 14, fontWeight: FontWeight.bold, color: Colors.white ),),
+                    fontSize: 17, fontWeight: FontWeight.bold, color: Colors.black ),),
                 children: [
                      Padding (
                         padding: const EdgeInsets.all(8.0),
                         child: Text(answer!, style: const TextStyle(
-                            fontSize: 14, fontWeight: FontWeight.normal, color: Colors.white
+                            fontSize: 16, fontWeight: FontWeight.normal, color: Colors.black
                         ),
                         ),
                       )
@@ -88,7 +89,7 @@ class RegristrarCompanies extends StatelessWidget {
                 ),
                 );
           }, 
-          separatorBuilder:  (BuildContext context, int index)=>const Divider(height: 3, color: Colors.white,),
+          separatorBuilder:  (BuildContext context, int index)=>const Divider(height: 3, color: Colors.black,),
           ),
         ),
     );
