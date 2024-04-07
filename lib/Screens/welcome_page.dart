@@ -23,23 +23,7 @@ class WelcomePage extends StatefulWidget {
 class _WelcomePageState extends State<WelcomePage> {
   //this selected index is to control the bottom nav bar
           int _selectedIndex = 0;
-
-        //this method will update our selected index
-          void navigateBottomBar(int index){
-            setState(() {
-              _selectedIndex= index;
-            });
-          }
-
-        
-            //Pages to display
-          final List<Widget> _pages = [
-           WelcomePage(),
-           AboutPage(),
-           MostUsedPage(),
-           ProfilePage()
-
-          ];
+          int index =0;
 
   final departments = [
     "Regristrar of Companies",
@@ -51,14 +35,6 @@ class _WelcomePageState extends State<WelcomePage> {
     "Veterinary and Livestock Production Services",
     "Department of Cooperative Development"
 
-  ];
-
-  final icons = [
-    const Icon(Icons.open_in_new),
-    const Icon(Icons.open_in_new),
-    const Icon(Icons.open_in_new),
-    const Icon(Icons.open_in_new),
-    const Icon(Icons.open_in_new),
   ];
 
   final ministries = [
@@ -79,39 +55,67 @@ class _WelcomePageState extends State<WelcomePage> {
       bottomNavigationBar: Container(
         color: Colors.indigo.shade900,
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
           child: GNav(
             backgroundColor: Colors.indigo.shade900,
             color: Colors.white,
             activeColor:Colors.white,
             tabBackgroundColor: Colors.amber.shade700,
             gap: 8,
-            onTabChange: (index) {
+           /* onTabChange: (index) {
               
-            },
+            },*/
             padding: EdgeInsets.all(16),
-            tabs: const [
+            tabs: [
                 GButton(icon: Icons.home,
                 text: "Home",
+                onPressed: (){
+                    setState(() {
+                      index=1;
+                    });
+                },
                 ),
                 GButton(icon: Icons.list,
                 text: "Most Used",
+                onPressed: (){
+                    setState(() {
+                      index=2;
+                    });
+                },
                 ),
                 GButton(icon: Icons.info,
-                text: "About"
+                text: "About",
+                onPressed: (){
+                    setState(() {
+                      index=3;
+                    });
+                },
                 ),
                 GButton(icon: Icons.person,
-                text: "Profile"
+                text: "Profile",
+                onPressed: (){
+                    setState(() {
+                      index=4;
+                    });
+                },
                 )
-            ]
+            ],
+
+            selectedIndex: _selectedIndex,
+            onTabChange: (index) {
+              setState(() {
+                _selectedIndex = index;
+              });
+            },
           ),
         ),
       ),
       appBar: AppBar(
         backgroundColor: Colors.indigo.shade900,
-        title: const Text("Government Departments",
+        title: Text("Government Departments",
         style: TextStyle(
           fontSize: 22,
+          color: Colors.white
         ),
         ),
       ),
@@ -124,7 +128,7 @@ class _WelcomePageState extends State<WelcomePage> {
             children: [
                //logo
             DrawerHeader(
-              child: Image.asset("assets/yati2.png") 
+              child: Image.asset("assets/yati3.png",),
             ),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 25.0),
@@ -169,10 +173,9 @@ class _WelcomePageState extends State<WelcomePage> {
             Padding(
               padding: const EdgeInsets.only(left:25.0),
               child: Theme(
-                data: new ThemeData(
+                data:  ThemeData(
                   canvasColor: Colors.white,
                   primaryColor: Colors.white,
-                  accentColor: Colors.white,
                   hintColor: Colors.white
                 ),
                 child: DropdownButton<String>(
@@ -242,11 +245,11 @@ class _WelcomePageState extends State<WelcomePage> {
 
       body: Column(
         children: [
-          SizedBox(height: 20,),
+          SizedBox(height: 15,),
           const Text(
             "Commonly Used Departments",
             style: TextStyle(
-              fontSize: 30,
+              fontSize: 25,
               fontWeight: FontWeight.bold
             ),
           ),
@@ -257,7 +260,7 @@ class _WelcomePageState extends State<WelcomePage> {
 
           ///Listview for common used departments
           SizedBox(
-            height: 400,
+            height: 380,
             child: ListView.separated(
               scrollDirection: Axis.vertical,
               physics: const BouncingScrollPhysics(),
@@ -332,7 +335,7 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
           ),
 
-          const SizedBox(height: 10,),
+          const SizedBox(height: 7,),
 
           Text(
             "Choose a Department",
@@ -342,7 +345,7 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
           ),
 
-          const SizedBox(height: 10,),
+          const SizedBox(height: 5,),
 
           ///This section covers the drop down menu where different departments can be selected. 
           Padding(
