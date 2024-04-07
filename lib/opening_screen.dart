@@ -1,6 +1,5 @@
 
 import 'package:YATI/Screens/welcome_page.dart';
-import 'package:YATI/navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -40,22 +39,22 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
     return Scaffold(
       body: Container(
         width: double.infinity,
-        decoration: const BoxDecoration(
-          color: Colors.black,
-          image: DecorationImage(image:AssetImage( "assets/yati2.png") )
+        decoration: BoxDecoration(
+          color: Colors.indigo.shade900,
+          image: DecorationImage(image:AssetImage( "assets/yati3.png") )
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset("assets/yati2.png"),
+            Image.asset("assets/yati3.png"),
             const SizedBox(height: 20,),
-            const Text(
+           /* const Text(
               "Welcome To Yati", style: TextStyle(
                 fontStyle: FontStyle.normal,
                 color: Colors.white,
                 fontSize: 32
               )
-            )
+            ) */
           ],
         )
         
