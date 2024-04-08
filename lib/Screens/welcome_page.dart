@@ -21,9 +21,7 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePageState extends State<WelcomePage> {
-  //this selected index is to control the bottom nav bar
-          int _selectedIndex = 0;
-          int index =0;
+
 
   final departments = [
     "Regristrar of Companies",
@@ -34,7 +32,6 @@ class _WelcomePageState extends State<WelcomePage> {
     "Liquor Licensing Department",
     "Veterinary and Livestock Production Services",
     "Department of Cooperative Development"
-
   ];
 
   final ministries = [
@@ -46,212 +43,20 @@ class _WelcomePageState extends State<WelcomePage> {
     "Ministry of Commerce, Industry & Trade",
     "Ministry of Agriculture",
     "Ministry of Commerce, Industry & Trade"
-    
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: Container(
-        color: Colors.indigo.shade900,
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-          child: GNav(
-            backgroundColor: Colors.indigo.shade900,
-            color: Colors.white,
-            activeColor:Colors.white,
-            tabBackgroundColor: Colors.amber.shade700,
-            gap: 8,
-           /* onTabChange: (index) {
-              
-            },*/
-            padding: EdgeInsets.all(16),
-            tabs: [
-                GButton(icon: Icons.home,
-                text: "Home",
-                onPressed: (){
-                    setState(() {
-                      index=1;
-                    });
-                },
-                ),
-                GButton(icon: Icons.list,
-                text: "Most Used",
-                onPressed: (){
-                    setState(() {
-                      index=2;
-                    });
-                },
-                ),
-                GButton(icon: Icons.info,
-                text: "About",
-                onPressed: (){
-                    setState(() {
-                      index=3;
-                    });
-                },
-                ),
-                GButton(icon: Icons.person,
-                text: "Profile",
-                onPressed: (){
-                    setState(() {
-                      index=4;
-                    });
-                },
-                )
-            ],
-
-            selectedIndex: _selectedIndex,
-            onTabChange: (index) {
-              setState(() {
-                _selectedIndex = index;
-              });
-            },
-          ),
-        ),
-      ),
-      appBar: AppBar(
-        backgroundColor: Colors.indigo.shade900,
-        title: Text("Government Departments",
-        style: TextStyle(
-          fontSize: 22,
-          color: Colors.white
-        ),
-        ),
-      ),
-      drawer: Drawer(
-        backgroundColor: Colors.indigo.shade900,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children:[
-           Column(
-            children: [
-               //logo
-            DrawerHeader(
-              child: Image.asset("assets/yati3.png",),
-            ),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25.0),
-              child: Divider(
-                color: Colors.white,
-              ),
-            ),
-
-
-            //other pages
-               //Home
-            const Padding(
-              padding: EdgeInsets.only(left: 25.0),
-              child: ListTile(
-                leading: Icon(Icons.home,
-                color: Colors.white,
-                ),
-                title: Text("Home",
-                style: TextStyle(
-                  color: Colors.white
-                ),
-                ),
-              ),
-            ),
-
-               //About
-            const Padding(
-              padding: EdgeInsets.only(left: 25.0),
-              child: ListTile(
-                leading: Icon(Icons.info,
-                color: Colors.white,
-                ),
-                title: Text("About",
-                style: TextStyle(
-                  color: Colors.white
-                ),
-                ),
-              ),
-            ),
-
-            ///code for dropdown list on the app drawer
-            Padding(
-              padding: const EdgeInsets.only(left:25.0),
-              child: Theme(
-                data:  ThemeData(
-                  canvasColor: Colors.white,
-                  primaryColor: Colors.white,
-                  hintColor: Colors.white
-                ),
-                child: DropdownButton<String>(
-                isExpanded: true,
-                iconEnabledColor: Colors.white,
-                hint:  Text(
-                  "Select a department",
-                  style: TextStyle(
-                    color: Colors.white
-                  ),
-                ),
-                items:<String>[
-                  'Home Affairs/Civil Regristration',
-                  'Regristrar of Companies',
-                  'Scholarship Service',
-                  'Social Welfare Department',
-                  'Industrial and Vocational Training',
-                  'Liqour License Department',
-                  'Veterinary and Livestock Production Services',
-                  'Department of Cooperative Development'
-                  ].map((String value){
-                  return DropdownMenuItem(
-                    value: value,
-                    child: Text(value,
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 17
-                    ),
-                    ),
-                );
-                }
-                ).toList(),
-                onChanged: (String? value){
-                  if(value != null){
-                    Navigator.pushNamed(context, value);
-                  }
-                }
-                ),
-              ),
-            ),
-
-            ],
-           ),
-
-              //Logout
-            const Padding(
-              padding: EdgeInsets.only(left: 25.0, bottom: 25),
-              child: ListTile(
-                leading: Icon(Icons.logout_outlined,
-                color: Colors.white,
-                ),
-                title: Text("Logout",
-                style: TextStyle(
-                  color: Colors.white
-                ),
-                ),
-              ),
-            ),
-
-
-
-          ],
-        ),
-      ),
-
-
+  
       body: Column(
         children: [
-          SizedBox(height: 15,),
+          SizedBox(
+            height: 15,
+          ),
           const Text(
             "Commonly Used Departments",
-            style: TextStyle(
-              fontSize: 25,
-              fontWeight: FontWeight.bold
-            ),
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
           ),
 
           const SizedBox(
@@ -270,17 +75,18 @@ class _WelcomePageState extends State<WelcomePage> {
                     child: Card(
                         child: ListTile(
                             tileColor: Colors.amber.shade700,
-                            
                             title: Text(
                               departments[index],
-                              style: TextStyle(color: Colors.black,
-                              fontSize: 17, fontWeight: FontWeight.bold
-                              ),
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 17,
+                                  fontWeight: FontWeight.bold),
                             ),
                             subtitle: Text(
                               ministries[index],
-                              style: TextStyle(color: Colors.black,
-                              fontSize: 15, 
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 15,
                               ),
                             ),
                             onTap: () {
@@ -288,8 +94,10 @@ class _WelcomePageState extends State<WelcomePage> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => RegristrarCompanies()));
-                              } else if (currentItem == "Home Affairs/Civil Regristration") {
+                                        builder: (context) =>
+                                            RegristrarCompanies()));
+                              } else if (currentItem ==
+                                  "Home Affairs/Civil Regristration") {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
@@ -299,31 +107,40 @@ class _WelcomePageState extends State<WelcomePage> {
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) => Scholarship()));
-                              } else if (currentItem == "Social Welfare Department") {
+                              } else if (currentItem ==
+                                  "Social Welfare Department") {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
                                         builder: (context) => SocialWelfare()));
-                              } else if (currentItem == "Industrial and Vocational Training") {
+                              } else if (currentItem ==
+                                  "Industrial and Vocational Training") {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => VocationalTraining() ));
-                              } else if (currentItem == "Liquor Licensing Department") {
+                                        builder: (context) =>
+                                            VocationalTraining()));
+                              } else if (currentItem ==
+                                  "Liquor Licensing Department") {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => LiquorDepartment()));
-                              }else if (currentItem == "Veterinary and Livestock Production Services") {
+                                        builder: (context) =>
+                                            LiquorDepartment()));
+                              } else if (currentItem ==
+                                  "Veterinary and Livestock Production Services") {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => VeterinaryServices()));
-                              }else if (currentItem == "Department of Cooperative Development") {
+                                        builder: (context) =>
+                                            VeterinaryServices()));
+                              } else if (currentItem ==
+                                  "Department of Cooperative Development") {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => CooperativeDevelopment()));
+                                        builder: (context) =>
+                                            CooperativeDevelopment()));
                               }
                             })));
               },
@@ -335,64 +152,60 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
           ),
 
-          const SizedBox(height: 7,),
+          const SizedBox(
+            height: 7,
+          ),
 
           Text(
             "Choose a Department",
-            style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold
-            ),
+            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
 
-          const SizedBox(height: 5,),
+          const SizedBox(
+            height: 5,
+          ),
 
-          ///This section covers the drop down menu where different departments can be selected. 
+          ///This section covers the drop down menu where different departments can be selected.
           Padding(
-           padding:  EdgeInsets.only(left: 5, right: 5, top: 0, bottom: 0),
+            padding: EdgeInsets.only(left: 5, right: 5, top: 0, bottom: 0),
             child: Container(
-              decoration: BoxDecoration(
-                color: Colors.amber.shade700
-              ),
+              decoration: BoxDecoration(color: Colors.amber.shade700),
               child: DropdownButton<String>(
-                dropdownColor: Colors.white,
-                isExpanded: true,
-                hint:  Text(
-                  "Select a department",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17
-                  ),
-                ),
-                items:<String>[
-                  'Home Affairs/Civil Regristration',
-                  'Regristrar of Companies',
-                  'Scholarship Service',
-                  'Social Welfare Department',
-                  'Industrial and Vocational Training',
-                  'Liqour License Department',
-                  'Veterinary and Livestock Production Services',
-                  'Department of Cooperative Development' 
-                  ].map((String value){
-                  return DropdownMenuItem(
-                    value: value,
-                    child: Text(value,
+                  dropdownColor: Colors.white,
+                  isExpanded: true,
+                  hint: Text(
+                    "Select a department",
                     style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 17
-                    ),
-                    ),
-                );
-                }
-                ).toList(),
-                onChanged: (String? value){
-                  if(value != null){
-                    Navigator.pushNamed(context, value);
-                  }
-                }
-                ),
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 17),
+                  ),
+                  items: <String>[
+                    'Home Affairs/Civil Regristration',
+                    'Regristrar of Companies',
+                    'Scholarship Service',
+                    'Social Welfare Department',
+                    'Industrial and Vocational Training',
+                    'Liqour License Department',
+                    'Veterinary and Livestock Production Services',
+                    'Department of Cooperative Development'
+                  ].map((String value) {
+                    return DropdownMenuItem(
+                      value: value,
+                      child: Text(
+                        value,
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 17),
+                      ),
+                    );
+                  }).toList(),
+                  onChanged: (String? value) {
+                    if (value != null) {
+                      Navigator.pushNamed(context, value);
+                    }
+                  }),
             ),
           )
         ],
