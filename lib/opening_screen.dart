@@ -1,5 +1,5 @@
 
-import 'package:YATI/Screens/welcome_page.dart';
+import 'package:YATI/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
     Future.delayed(Duration(seconds: 6), () {
       Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (_)=> WelcomePage() )
+        builder: (_)=> BottomNav() )
         );
     });
   }

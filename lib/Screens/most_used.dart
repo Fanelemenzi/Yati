@@ -6,7 +6,7 @@ class MostUsedPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Text("This is the most used page"),
+      body: Center(child: Text("This is the most used page")),
     );
   }
 }
