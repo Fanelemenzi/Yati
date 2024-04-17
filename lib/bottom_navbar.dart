@@ -1,5 +1,7 @@
+import 'dart:ffi';
+
 import 'package:YATI/Screens/about.dart';
-import 'package:YATI/Screens/most_used.dart';
+import 'package:YATI/Screens/AllDepartments.dart';
 import 'package:YATI/Screens/profile.dart';
 import 'package:YATI/Screens/welcome_page.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +18,7 @@ class _BottomNavState extends State<BottomNav> {
 
     final List <Widget> _pages = [
       WelcomePage(),
-      const MostUsedPage(),
+      AllDepartments(),
       const AboutPage(),
       const ProfilePage()
     ];
@@ -31,6 +33,7 @@ class _BottomNavState extends State<BottomNav> {
   Widget build(BuildContext context) {
     return Scaffold(
        appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white),
         backgroundColor: Colors.indigo.shade900,
         title: Text(
           "Government Departments",
@@ -169,7 +172,7 @@ class _BottomNavState extends State<BottomNav> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.list),
-            label: "Most Used"
+            label: "All Departments"
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.info),

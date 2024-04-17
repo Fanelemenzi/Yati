@@ -1,22 +1,16 @@
-import 'package:YATI/dep_pages/Ministry%20of%20Agriculture/vet_livestock_production.dart';
-import 'package:YATI/dep_pages/Ministry%20of%20Commerce/Cooperative_developement.dart';
-import 'package:YATI/dep_pages/Ministry%20of%20Commerce/Liquor_department.dart';
-import 'package:YATI/dep_pages/Ministry%20of%20Home%20Affairs/home_affairs.dart';
-import 'package:YATI/dep_pages/Ministry%20of%20Commerce/regristrar_of_companies.dart';
-import 'package:YATI/dep_pages/Ministry%20of%20Labour/Industrial_and_Vacational_training.dart';
 import 'package:flutter/material.dart';
+
 import '../dep_pages/Deputy PM Office/Social_Welfare_Department.dart';
+import '../dep_pages/Ministry of Agriculture/vet_livestock_production.dart';
+import '../dep_pages/Ministry of Commerce/Cooperative_developement.dart';
+import '../dep_pages/Ministry of Commerce/Liquor_department.dart';
+import '../dep_pages/Ministry of Commerce/regristrar_of_companies.dart';
+import '../dep_pages/Ministry of Home Affairs/home_affairs.dart';
+import '../dep_pages/Ministry of Labour/Industrial_and_Vacational_training.dart';
 import '../dep_pages/Ministry of Labour/scholarship.dart';
 
-class WelcomePage extends StatefulWidget {
-  WelcomePage({Key? key}) : super(key: key);
-
-  @override
-  State<WelcomePage> createState() => _WelcomePageState();
-}
-
-class _WelcomePageState extends State<WelcomePage> {
-
+class AllDepartments extends StatelessWidget {
+  AllDepartments({super.key});
 
   final departments = [
     "Regristrar of Companies",
@@ -46,20 +40,7 @@ class _WelcomePageState extends State<WelcomePage> {
       body: Column(
         children: [
           SizedBox(
-            height: 15,
-          ),
-          const Text(
-            "Commonly Used Departments",
-            style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-          ),
-
-          const SizedBox(
-            height: 10,
-          ),
-
-          ///Listview for common used departments
-          SizedBox(
-            height: 380,
+            height: 550,
             child: ListView.separated(
               scrollDirection: Axis.vertical,
               physics: const BouncingScrollPhysics(),
@@ -145,65 +126,8 @@ class _WelcomePageState extends State<WelcomePage> {
               itemCount: departments.length,
             ),
           ),
-
-          const SizedBox(
-            height: 7,
-          ),
-
-          Text(
-            "Choose a Department",
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-          ),
-
-          const SizedBox(
-            height: 5,
-          ),
-
-          ///This section covers the drop down menu where different departments can be selected.
-          Padding(
-            padding: EdgeInsets.only(left: 5, right: 5, top: 0, bottom: 0),
-            child: Container(
-              decoration: BoxDecoration(color: Colors.amber.shade700),
-              child: DropdownButton<String>(
-                  dropdownColor: Colors.white,
-                  isExpanded: true,
-                  hint: Text(
-                    "Select a department",
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17),
-                  ),
-                  items: <String>[
-                    'Home Affairs/Civil Regristration',
-                    'Regristrar of Companies',
-                    'Scholarship Service',
-                    'Social Welfare Department',
-                    'Industrial and Vocational Training',
-                    'Liqour License Department',
-                    'Veterinary and Livestock Production Services',
-                    'Department of Cooperative Development'
-                  ].map((String value) {
-                    return DropdownMenuItem(
-                      value: value,
-                      child: Text(
-                        value,
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 17),
-                      ),
-                    );
-                  }).toList(),
-                  onChanged: (String? value) {
-                    if (value != null) {
-                      Navigator.pushNamed(context, value);
-                    }
-                  }),
-            ),
-          )
         ],
-      ),
+      )
     );
   }
 }
