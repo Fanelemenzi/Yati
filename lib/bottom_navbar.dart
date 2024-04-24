@@ -4,6 +4,8 @@ import 'package:YATI/Screens/profile.dart';
 import 'package:YATI/Screens/welcome_page.dart';
 import 'package:flutter/material.dart';
 
+///this is the bottom navigation bar which controls the rendering of the 4 bottom widgte items 
+
 class BottomNav extends StatefulWidget {
   const BottomNav({super.key});
 
@@ -14,6 +16,7 @@ class BottomNav extends StatefulWidget {
 class _BottomNavState extends State<BottomNav> {
     int _selectedIndex = 0;
 
+    //list of pages rendering or connected to icons of the bottom nav bar
     final List <Widget> _pages = [
       WelcomePage(),
       const MostUsedPage(),
@@ -21,6 +24,8 @@ class _BottomNavState extends State<BottomNav> {
       const ProfilePage()
     ];
 
+    /*Controls the the ontap function of bottom bar rendering diffrent pages meontined above whenever one 
+    touches botton nav bar icons */ 
     void _onItemTapped (int index){
         setState(() {
           _selectedIndex = index;
@@ -39,7 +44,7 @@ class _BottomNavState extends State<BottomNav> {
           ),
         ),
       ),
-
+      ///App drawer item
       drawer: Drawer(
         backgroundColor: Colors.indigo.shade900,
         child: Column(
@@ -47,7 +52,7 @@ class _BottomNavState extends State<BottomNav> {
           children: [
             Column(
               children: [
-                //logo
+                ///logo
                 DrawerHeader(
                   child: Image.asset(
                     "assets/yati3.png",
@@ -60,8 +65,8 @@ class _BottomNavState extends State<BottomNav> {
                   ),
                 ),
 
-                //other pages
-                //Home
+                ///other pages
+                ///Home
                 const Padding(
                   padding: EdgeInsets.only(left: 25.0),
                   child: ListTile(
@@ -76,7 +81,7 @@ class _BottomNavState extends State<BottomNav> {
                   ),
                 ),
 
-                //About
+                ///About
                 const Padding(
                   padding: EdgeInsets.only(left: 25.0),
                   child: ListTile(
@@ -155,7 +160,7 @@ class _BottomNavState extends State<BottomNav> {
         ),
       ),
 
-
+      ///bottom navigation bar section code
       body: _pages[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,

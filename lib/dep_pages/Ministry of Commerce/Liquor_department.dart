@@ -1,8 +1,11 @@
+///this page contains information and code for the LIqour department
+
 import 'package:flutter/material.dart';
 
 class LiquorDepartment extends StatelessWidget {
      LiquorDepartment({Key? key}) : super(key: key);
 
+   ///list of FAQs and answers for the Liqour department
   final questions = [
     {
       'question': '1. How much does it cost to regrister a fully legal business?',
@@ -69,6 +72,8 @@ class LiquorDepartment extends StatelessWidget {
         ),
             ),
           ),
+
+        ///Listview renders a list of FAQs and their answers called from the data stored or fetched from above list
         body: ListView.separated(
           itemCount:questions.length,
           itemBuilder: (BuildContext context, int index ){

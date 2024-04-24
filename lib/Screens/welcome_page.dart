@@ -22,7 +22,7 @@ class WelcomePage extends StatefulWidget {
 
 class _WelcomePageState extends State<WelcomePage> {
 
-
+  ///list of all departments 
   final departments = [
     "Regristrar of Companies",
     "Home Affairs/Civil Regristration",
@@ -34,6 +34,7 @@ class _WelcomePageState extends State<WelcomePage> {
     "Department of Cooperative Development"
   ];
 
+  ///this renders a subtitle showing which ministry department is in
   final ministries = [
     "Ministry of Commerce Industry & Trade",
     "Ministry of Home Affairs",
@@ -49,6 +50,7 @@ class _WelcomePageState extends State<WelcomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
   
+      ///column widget for widgets in home tab
       body: Column(
         children: [
           SizedBox(
@@ -165,7 +167,7 @@ class _WelcomePageState extends State<WelcomePage> {
             height: 5,
           ),
 
-          ///This section covers the drop down menu where different departments can be selected.
+          ///This section covers the drop down menu where links to different departments can be selected.
           Padding(
             padding: EdgeInsets.only(left: 5, right: 5, top: 0, bottom: 0),
             child: Container(

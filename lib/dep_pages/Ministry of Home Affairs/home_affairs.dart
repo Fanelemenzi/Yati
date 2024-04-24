@@ -1,8 +1,12 @@
+///this page contains information and code for the Home Affiars department 
+
 import 'package:flutter/material.dart';
 
 class HomeAffiars extends StatelessWidget {
      HomeAffiars({Key? key}) : super(key: key);
 
+
+///list of FAQs and answers for the Home affiars department
 final questions = [
     {
       'question': '1. What the cost of regristering for National Identity Document and the documents required?',
@@ -49,6 +53,8 @@ final questions = [
         ),
             ),
           ),
+
+          ///Listview renders a list of FAQs and their answers called from the data stored or fetched from above list
         body: ListView.separated(
           itemCount:questions.length,
           itemBuilder: (BuildContext context, int index ){
