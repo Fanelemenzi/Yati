@@ -1,8 +1,11 @@
+///this page contains information and code for the veterinary services department
+
 import 'package:flutter/material.dart';
 
 class VeterinaryServices extends StatelessWidget {
   VeterinaryServices({super.key});
 
+///list of FAQs and answers for the veterinary services department
   final questions = [
     {
       'question': 'What services available in Tinkhundla centers?',
@@ -44,6 +47,8 @@ class VeterinaryServices extends StatelessWidget {
         ),
             ),
           ),
+
+            ///Listview renders a list of FAQs and their answers called from the data stored or fetched from above list
         body: ListView.separated(
           itemCount:questions.length,
           itemBuilder: (BuildContext context, int index ){

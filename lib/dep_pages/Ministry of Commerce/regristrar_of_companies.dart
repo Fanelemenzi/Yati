@@ -1,8 +1,12 @@
+///this page contains information and code for the department of regristrar of companies
+
 import 'package:flutter/material.dart';
 
 class RegristrarCompanies extends StatelessWidget {
      RegristrarCompanies({Key? key}) : super(key: key);
 
+
+    ///list of FAQs and answers for the regristrar of companies department 
   final questions = [
     {
       'question': '1. How much does it cost to regrister a fully legal business?',
@@ -69,6 +73,8 @@ class RegristrarCompanies extends StatelessWidget {
         ),
             ),
           ),
+
+          ///Listview renders a list of FAQs and their answers called from the data stored or fetched from above list
         body: ListView.separated(
           itemCount:questions.length,
           itemBuilder: (BuildContext context, int index ){

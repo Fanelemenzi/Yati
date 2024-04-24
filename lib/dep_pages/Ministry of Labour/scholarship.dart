@@ -1,8 +1,12 @@
+///this page contains information and code for the scholarship department
+
 import 'package:flutter/material.dart';
 
 class Scholarship extends StatelessWidget {
   Scholarship({super.key});
 
+
+    ///list of FAQs and answers for the scholarship department
   final questions = [
     {
       'question': '1. Who qualifies for Eswatini Government Study Loan?',
@@ -36,6 +40,8 @@ class Scholarship extends StatelessWidget {
         ),
             ),
           ),
+
+          ///Listview renders a list of FAQs and their answers called from the data stored or fetched from above list
         body: ListView.separated(
           itemCount:questions.length,
           itemBuilder: (BuildContext context, int index ){

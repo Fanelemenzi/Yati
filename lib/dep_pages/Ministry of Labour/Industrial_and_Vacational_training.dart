@@ -1,8 +1,12 @@
+///this page contains information and code for the vocational training department
+
 import 'package:flutter/material.dart';
 
 class VocationalTraining extends StatelessWidget {
   VocationalTraining({super.key});
 
+
+///list of FAQs and answers for the vocational training department
   final questions = [
     {
       'question': 'What services available in Tinkhundla centers?',
@@ -44,6 +48,8 @@ class VocationalTraining extends StatelessWidget {
         ),
         ),
           ),
+
+          ///Listview renders a list of FAQs and their answers called from the data stored or fetched from above list
         body: ListView.separated(
           itemCount:questions.length,
           itemBuilder: (BuildContext context, int index ){

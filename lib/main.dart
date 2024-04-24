@@ -13,9 +13,10 @@ import 'package:flutter/services.dart';
 
 
 
-
+///this is the base of the flutter app, its the first class that is called or run which allother widgets are built on
 void main() {
   runApp(MyApp() );
+  ///this part removes the backward arrows on each of the pages in appplication
  SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: []);
 }
 
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colors.white
       ),
       home: SplashScreen(),
+      ///routes are logged here that can be called through the application
       routes: {
         'Home Affairs/Civil Regristration': (context) => HomeAffiars(),
         'Regristrar of Companies': (context) => RegristrarCompanies(),
