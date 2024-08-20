@@ -11,7 +11,7 @@ import 'package:YATI/opening_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-
+///This is test if docs read PR
 
 ///this is the base of the flutter app, its the first class that is called or run which allother widgets are built on
 void main() {
