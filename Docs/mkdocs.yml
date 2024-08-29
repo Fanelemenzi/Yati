@@ -1,1 +1,7 @@
-site_name: My Docs
+site_name: Yati Technical Documentation
+nav:
+  - Home: index.md
+  - Overview: overview.md
+  - Development Environment: devenv.md
+theme: 
+    name: material
