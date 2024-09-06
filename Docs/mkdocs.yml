@@ -3,5 +3,7 @@ nav:
   - Home: index.md
   - Overview: overview.md
   - Development Environment: devenv.md
+  - Contributing to Yati: contribute.md
+  - User-manual: user-manual.md
 theme: 
     name: material
