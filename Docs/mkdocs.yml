@@ -9,4 +9,4 @@ nav:
   - User-manual: user-manual.md
   
 theme: 
-    name: material
+    name: readthedocs
