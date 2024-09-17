@@ -1,0 +1,1175 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../devenv/">
+      
+      
+        <link rel="next" href="../gitguide2/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>Git Guide - Yati Technical Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#git-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Yati Technical Documentation" class="md-header__button md-logo" aria-label="Yati Technical Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yati Technical Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Git Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Yati Technical Documentation" class="md-nav__button md-logo" aria-label="Yati Technical Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yati Technical Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devenv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development Environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Git Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Git Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-and-configure-git-join-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install and configure Git, join GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-git-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Git terms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-yati-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Yati Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Yati Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-your-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create your fork
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-clone-to-your-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Clone to your machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-open-project-on-your-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Open Project on your IDE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-copies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working Copies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working Copies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relevant-git-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relevant Git commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-git-as-you-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Git as you work
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Git as you work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#know-what-branch-youre-working-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Know what branch you're working on
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-on-a-feature-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Work on a feature branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage Changes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage Changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-status-of-working-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Status of working directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-additions-with-git-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage additions with git add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commit Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-your-commits-to-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push your commits to Github
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-and-stay-out-of-trouble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get and stay out of trouble
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get and stay out of trouble">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#undo-a-merge-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Undo a merge commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-a-lost-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restore a lost commit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitguide2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pull Requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing to Yati
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-manual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User-manual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#set-up-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Set up Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-and-configure-git-join-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install and configure Git, join GitHub
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-git-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Important Git terms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-yati-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Yati Code
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get Yati Code">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-create-your-fork" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Create your fork
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-clone-to-your-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Clone to your machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-open-project-on-your-ide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Open Project on your IDE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-copies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working Copies
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Working Copies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#relevant-git-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relevant Git commands
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-git-as-you-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Git as you work
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using Git as you work">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#know-what-branch-youre-working-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Know what branch you're working on
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#work-on-a-feature-branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Work on a feature branch
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage Changes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stage Changes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#get-status-of-working-directory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get Status of working directory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stage-additions-with-git-add" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stage additions with git add
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#commit-changes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Commit Changes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#push-your-commits-to-github" class="md-nav__link">
+    <span class="md-ellipsis">
+      Push your commits to Github
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get-and-stay-out-of-trouble" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get and stay out of trouble
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Get and stay out of trouble">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#undo-a-merge-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Undo a merge commit
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restore-a-lost-commit" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restore a lost commit
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="git-guide"><strong>Git Guide</strong></h1>
+<h2 id="set-up-git"><strong>Set up Git</strong></h2>
+<p>If you’re already using Git, have a client you like, and a GitHub account, you can skip this section. Otherwise, read on!</p>
+<h3 id="install-and-configure-git-join-github"><strong>Install and configure Git, join GitHub</strong></h3>
+<p>If you’re not already using Git, you might need to <a href="">install</a> and <a href="">configure</a> it.
+You’ll also need a GitHub account, which you can sign up for <a href="">here</a>.</p>
+<h2 id="important-git-terms"><strong>Important Git terms</strong></h2>
+<p>When you install Git, it adds a manual entry for gitglossary. You can view this glossary by running man gitglossary. Below we’ve included the Git terms you’ll encounter most often along with their definitions from gitglossary.</p>
+<p><strong>branch</strong>
+A “branch” is an active line of development. The most recent commit on a branch is referred to as the tip of that branch. The tip of the branch is referenced by a branch head, which moves forward as additional development is done on the branch. A single Git repository can track an arbitrary number of branches, but your working tree is associated with just one of them (the “current” or “checked out” branch), and HEAD points to that branch.</p>
+<p><strong>cache</strong>
+Obsolete for: index</p>
+<p><strong>checkout</strong>
+The action of updating all or part of the working tree with a tree object or blob from the object database, and updating the index and HEAD if the whole working tree has been pointed at a new branch.</p>
+<p><strong>commit</strong>
+As a noun: A single point in the Git history; the entire history of a project is represented as a set of interrelated commits. The word “commit” is often used by Git in the same places other revision control systems use the words “revision” or “version”. Also used as a short hand for commit object.</p>
+<p>As a verb: The action of storing a new snapshot of the project’s state in the Git history, by creating a new commit representing the current state of the index and advancing HEAD to point at the new</p>
+<p><strong>fast-forward</strong>
+A fast-forward is a special type of merge where you have a revision and you are “merging” another branch’s changes that happen to be a descendant of what you have. In such these cases, you do not make a new merge commit but instead just update to their revision. This will happen frequently on a remote-tracking branch of a remote repository.</p>
+<p><strong>fetch</strong>
+Fetching a branch means to get the branch’s head ref from a remote repository, to find out which objects are missing from the local object database, and to get them, too. See also git-fetch(1)</p>
+<p><strong>hash</strong>
+In Git’s context, synonym for object name.</p>
+<p><strong>head</strong>
+A named reference to the commit at the tip of a branch. Heads are stored in a file in $GIT_DIR/refs/heads/ directory, except when using packed refs. See also git-pack-refs(1).</p>
+<p><strong>HEAD</strong>
+The current branch. In more detail: Your working tree is normally derived from the state of the tree referred to by HEAD. HEAD is a reference to one of the heads in your repository, except when using a detached HEAD, in which case it directly references an arbitrary commit.</p>
+<p><strong>index</strong>
+A collection of files with stat information, whose contents are stored as objects. The index is a stored version of your working tree. Truth be told, it can also contain a second, and even a third version of a working tree, which are used when merging.</p>
+<p><strong>pull</strong>
+Pulling a branch means to fetch it and merge it. See also git-pull(1)</p>
+<p><strong>push</strong>
+Pushing a branch means to get the branch’s head ref from a remote repository, find out if it is a direct ancestor to the branch’s local head ref, and in that case, putting all objects, which are reachable from the local head ref, and which are missing from the remote repository, into the remote object database, and updating the remote head ref. If the remote head is not an ancestor to the local head, the push fails.</p>
+<p><strong>rebase</strong>
+To reapply a series of changes from a branch to a different base, and reset the head of that branch to the result.</p>
+<h2 id="get-yati-code"><strong>Get Yati Code</strong></h2>
+<p>Yati uses a forked-repo and rebase-oriented workflow. This means that all contributors create a fork of the <a href="">Yati repository</a> they want to contribute to and then submit pull requests to the upstream repository to have their contributions reviewed and accepted. We also recommend you work on feature branches.</p>
+<h3 id="step-1-create-your-fork"><strong>Step 1: Create your fork</strong></h3>
+<p>The following steps you’ll only need to do the first time you set up a machine for contributing to a given Yati project. You’ll need to repeat the steps for any additional Yati projects that you may work on.</p>
+<p>The first thing you’ll want to do to contribute to Yati is fork (see how) the appropriate Yati repository.</p>
+<h3 id="step-2-clone-to-your-machine"><strong>Step 2: Clone to your machine</strong></h3>
+<p>Next, clone your fork to your local machine with the following command on your working directory
+<code>git clone https://github.com/Fanelemenzi/Yati.git</code></p>
+<h3 id="step-3-open-project-on-your-ide"><strong>Step 3: Open Project on your IDE</strong></h3>
+<p>Once you cloned the project, open the cloned forlder with your prefered IDE or the <a href="../devenv/">recommended</a> one. </p>
+<h2 id="working-copies"><strong>Working Copies</strong></h2>
+<p>When you work on Yati code, there are three copies of the Yati Git repository that you are generally concerned with:</p>
+<ul>
+<li>The main remote repository. This is the official Yati repository on GitHub. You probably don’t have write access to this repository.</li>
+<li>The origin remote: Your personal remote repository on GitHub. You’ll use this to share your code and create pull requests.</li>
+<li>local copy: This lives on your laptop or your remote dev instance, and is what you’ll use to make changes and create commits.</li>
+</ul>
+<p>When you work on Yati code, you will end up moving code between the various working copies.</p>
+<h3 id="workflows"><strong>Workflows</strong></h3>
+<p>Sometimes you need to get commits. Here are some scenarios:</p>
+<ul>
+<li>You may fork the official Yati repository to your GitHub fork.</li>
+<li>You may fetch commits from the official Yati repository to your local copy.</li>
+<li>You occasionally may fetch commits from your forked copy.</li>
+</ul>
+<p>Sometimes you want to publish commits. Here are some scenarios:</p>
+<ul>
+<li>You push code from your local copy to your GitHub fork. (You usually want to put the commit on a feature branch.)</li>
+<li>You submit a PR to the official Yati repo.</li>
+</ul>
+<p>Finally, the Yati core team will occasionally want your changes!</p>
+<ul>
+<li>The Yati core team can accept your changes and add them to the official repo, usually on the <code>main</code> branch.</li>
+</ul>
+<h3 id="relevant-git-commands"><strong>Relevant Git commands</strong></h3>
+<p>The following commands are useful for moving commits between working copies:</p>
+<ul>
+<li><code>git fetch</code>: This grabs code from another repository to your local copy. (Defaults to fetching from your default remote, <code>origin</code>).</li>
+<li><code>git fetch upstream</code>: This grabs code from the upstream repository to your local copy.</li>
+<li><code>git push</code>: This pushes code from your local repository to one of the remotes.</li>
+<li><code>git remote</code>: This helps you configure short names for remotes.</li>
+<li><code>git pull</code>: This pulls code, but by default creates a merge commit (which you definitely don’t want). However, if you’ve followed our cloning documentation, this will do <code>git pull --rebase</code> instead, which is the only mode you’ll want to use when working on Yati.</li>
+</ul>
+<h2 id="using-git-as-you-work"><strong>Using Git as you work</strong></h2>
+<h3 id="know-what-branch-youre-working-on"><strong>Know what branch you're working on</strong></h3>
+<p>When using Git, it’s important to know which branch you currently have checked out because most Git commands implicitly operate on the current branch. You can determine the currently checked out branch several ways.</p>
+<p>One way is with git status:</p>
+<pre><code>$ git status
+On branch issue-demo
+nothing to commit, working directory clean 
+</code></pre>
+<p>Another is with git branch which will display all local branches, with a star next to the current branch:</p>
+<pre><code>$ git branch
+* issue-demo
+  main
+</code></pre>
+<p>To see even more information about your branches, including remote branches, use git branch -vva:</p>
+<pre><code>$ git branch -vva
+* issue-123                 517468b troubleshooting tip about provisioning
+  main                      f0eaee6 [origin/main] bug: Fix traceback in get_missed_message_token_from_address().
+  remotes/origin/HEAD       -&gt; origin/main
+  remotes/origin/issue-1234 4aeccb7 Another test commit, with longer message.
+  remotes/origin/main       f0eaee6 bug: Fix traceback in get_missed_message_token_from_address().
+  remotes/upstream/main     dbeab6a Optimize checks of test database state by moving into Python.
+</code></pre>
+<h3 id="work-on-a-feature-branch"><strong>Work on a feature branch</strong></h3>
+<p>One way to keep your work organized is to create a branch for each issue or feature. Recall from how Git is different that Git is designed for lightweight branching and merging. You can and should create as many branches as you’d like.</p>
+<p>Next, from your main branch, create a new tracking branch, providing a descriptive name for your feature branch:</p>
+<pre><code>$ git checkout main
+Switched to branch 'main'
+
+$ git checkout -b issue-1755-fail2ban
+Switched to a new branch 'issue-1755-fail2ban'
+</code></pre>
+<p>Alternatively, you can create a new branch explicitly based off <code>main</code> branch:</p>
+<pre><code>$ git checkout -b issue-1755-fail2ban upstream/main
+Switched to a new branch 'issue-1755-fail2ban'
+</code></pre>
+<p>Now you're ready to work on the issue or feature.</p>
+<h3 id="stage-changes"><strong>Stage Changes</strong></h3>
+<p>Recall that files tracked with Git have possible three states: committed, modified, and staged.</p>
+<p>To prepare a commit, first add the files with changes that you want to include in your commit to your staging area. You add both new files and existing ones. You can also remove files from staging when necessary.</p>
+<h4 id="get-status-of-working-directory"><strong>Get Status of working directory</strong></h4>
+<p>To see what files in the working directory have changes that have not been staged, use <code>git status</code>.</p>
+<p>If you have no changes in the working directory, you’ll see something like this:</p>
+<pre><code>$ git status
+On branch issue-123
+nothing to commit, working directory clean
+</code></pre>
+<p>If you have unstaged changes, you'll see something like this:</p>
+<pre><code>On branch issue-123
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        newfile.py
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</code></pre>
+<h4 id="stage-additions-with-git-add"><strong>Stage additions with <code>git add</code></strong></h4>
+<p>To add changes to your staging area, use git add <filename>. Because git add is all about staging the changes you want to commit, you use it to add new files as well as files with changes to your staging area.</p>
+<p>Continuing our example from above, after we run git add newfile.py, we’ll see the following from git status:</p>
+<pre><code>On branch issue-123
+Changes to be committed:
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+
+        new file:   newfile.py
+</code></pre>
+<p>You can view the changes in files you have staged with <code>git diff --cached</code>. To view changes to files you haven’t yet staged, just use <code>git diff</code>.</p>
+<p>If you want to add all changes in the working directory, use <strong><code>git add -A</code></strong> <a href="">documentation</a>.</p>
+<p>You can also stage changes using your graphical Git client.</p>
+<p>If you stage a file, you can undo it with <code>git reset HEAD &lt;filename&gt;</code>. Here’s an example where we stage a file <code>test3.txt</code> and then unstage it:</p>
+<pre><code>$ git add test3.txt
+On branch issue-1234
+Changes to be committed:
+  (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+
+        new file:   test3.txt
+
+$ git reset HEAD test3.txt
+git status
+On branch issue-1234
+Untracked files:
+  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+
+        test3.txt
+
+nothing added to commit but untracked files present (use &quot;git add&quot; to track)
+</code></pre>
+<h4 id="commit-changes"><strong>Commit Changes</strong></h4>
+<p>When you’ve staged all your changes, you’re ready to commit. You can do this with <code>git commit -m "My commit message."</code> to include a commit message.</p>
+<p>Here’s an example of committing with the -m for a one-line commit message:</p>
+<pre><code>$ git commit -m &quot;Add a test commit for docs.&quot;
+[issue-123 173e17a] Add a test commit for docs.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 newfile.py
+</code></pre>
+<p>You can also use <code>git commit</code> without the <code>-m</code> option and your editor to open, allowing you to easily draft a multi-line commit message.</p>
+<p>How long your commit message should be depends on where you are in your work. Using short, one-line messages for commits related to in-progress work makes sense. For a commit that you intend to be final or that encompasses a significant amount or complex work, you should include a longer message.</p>
+<p>Keep in mind that your commit should contain a ‘minimal coherent idea’ and have a quality commit message.</p>
+<p>Here’s an example of a longer commit message that will be used for a pull request:</p>
+<pre><code>Integrate Fail2Ban.
+
+Updates Zulip logging to put an unambiguous entry into the logs such
+that fail2ban can be configured to look for these entries.
+
+Tested on my local Ubuntu development server, but would appreciate
+someone testing on a production install with more users.
+
+Fixes #1755.
+</code></pre>
+<p>The first line is the summary. It’s a complete sentence, ending in a period. It uses a present-tense action verb, “Integrate”, rather than “Integrates” or “Integrating”.</p>
+<p>The following paragraphs are full prose and explain why and how the change was made. It explains what testing was done and asks specifically for further testing in a more production-like environment.</p>
+<p>The final paragraph indicates that this commit addresses and fixes issue #1755. When you submit your pull request, GitHub will detect and link this reference to the appropriate issue. Once your commit is merged into upstream/main, GitHub will automatically close the referenced issue. See Closing issues via commit messages for details.</p>
+<p>Note in particular that GitHub’s regular expressions for this feature are sloppy, so phrases like <code>Partially fixes #1234</code> will automatically close the issue. Phrases like <code>Fixes part of #1234</code> are a good alternative.</p>
+<p>Make as many commits as you need to address the issue or implement your feature.</p>
+<h4 id="push-your-commits-to-github"><strong>Push your commits to Github</strong></h4>
+<p>As you’re working, it’s a good idea to frequently push your changes to GitHub. This ensures your work is backed up should something happen to your local machine and allows others to follow your progress. It also allows you to work from multiple computers without losing work.</p>
+<p>Pushing to a feature branch is just like pushing to main:</p>
+<pre><code>$ git push origin &lt;branch-name&gt;
+Counting objects: 6, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 658 bytes | 0 bytes/s, done.
+Total 6 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 1 local objects.
+To git@github.com:christi3k/zulip.git
+ * [new branch]      issue-demo -&gt; issue-
+</code></pre>
+<p>If you want to see what Git will do without actually performing the push, add the -n (dry-run) option: <code>git push -n origin &lt;branch-name&gt;</code>. If everything looks good, re-run the push command without -n.</p>
+<p>If the feature branch does not already exist on GitHub, it will be created when you push and you’ll see <code>* [new branch]</code> in the command output.</p>
+<h2 id="get-and-stay-out-of-trouble"><strong>Get and stay out of trouble</strong></h2>
+<p>Git is a powerful yet complex version control system. Even for contributors experienced at using version control, it can be confusing. The good news is that nearly all Git actions add information to the Git database, rather than removing it. As such, it’s hard to make Git perform actions that you can’t undo. However, Git can’t undo what it doesn’t know about, so it’s a good practice to frequently commit your changes and frequently push your commits to your remote repository.</p>
+<h3 id="undo-a-merge-commit"><strong>Undo a merge commit</strong></h3>
+<p>A merge commit is a special type of commit that has two parent commits. It’s created by Git when you merge one branch into another and the last commit on your current branch is not a direct ancestor of the branch you are trying to merge in. This happens quite often in a busy project like Zulip where there are many contributors because upstream/zulip will have new commits while you’re working on a feature or bugfix. In order for Git to merge your changes and the changes that have occurred on zulip/upstream since you first started your work, it must perform a three-way merge and create a merge commit.</p>
+<p>Merge commits aren’t bad, however, Zulip doesn’t use them. Instead Zulip uses a forked-repo, rebase-oriented workflow.</p>
+<p>A merge commit is usually created when you’ve run git pull or git merge. You’ll know you’re creating a merge commit if you’re prompted for a commit message and the default is something like this:</p>
+<pre><code>Merge branch 'main' of https://github.com/yati
+
+# Please enter a commit message to explain why this merge is necessary,
+# especially if it merges an updated upstream into a topic branch.
+#
+# Lines starting with '#' will be ignored, and an empty message aborts
+# the commit.
+</code></pre>
+<p>And the first entry for git log will show something like:</p>
+<pre><code>commit e5f8211a565a5a5448b93e98ed56415255546f94
+Merge: 13bea0e e0c10ed
+Author: Christie Koehler &lt;ck@christi3k.net&gt;
+Date:   Mon Oct 10 13:25:51 2016 -0700
+
+    Merge branch 'main' of https://github.com/yati
+</code></pre>
+<p>Some graphical Git clients may also create merge commits.
+To undo a merge commit, first run git reflog to identify the commit you want to roll back to:</p>
+<pre><code>git reflog
+
+e5f8211 HEAD@{0}: pull upstream main: Merge made by the 'recursive' strategy.
+13bea0e HEAD@{1}: commit: test commit for docs.
+
+</code></pre>
+<p>Reflog output will be long. The most recent Git refs will be listed at the top. In the example above <code>e5f8211 HEAD@{0}</code>: is the merge commit made automatically by <code>git pull</code> and <code>13bea0e HEAD@{1}:</code> is the last commit I made before running <code>git pull</code>, the commit that I want to rollback to.</p>
+<p>Once you’d identified the ref you want to revert to, you can do so with git reset:</p>
+<pre><code>git reset --hard 13bea0e
+HEAD is now at 13bea0e test commit for docs.
+</code></pre>
+<h3 id="restore-a-lost-commit"><strong>Restore a lost commit</strong></h3>
+<p>We’ve mentioned you can use <code>git reset --hard</code> to rollback to a previous commit. What if you run <code>git reset --hard</code> and then realize you actually need one or more of the commits you just discarded? No problem, you can restore them with <code>git cherry-pick</code> (docs).</p>
+<p>For example, let’s say you just committed “some work” and your <code>git log</code> looks like this:</p>
+<pre><code>* 67aea58 (HEAD -&gt; main) some work
+* 13bea0e test commit for docs.
+</code></pre>
+<p>You then mistakenly run <code>git reset --hard 13bea0e</code>:</p>
+<pre><code>git reset --hard 13bea0e
+HEAD is now at 13bea0e test commit for docs.
+
+git log
+* 13bea0e (HEAD -&gt; main) test commit for docs.
+</code></pre>
+<p>And then realize you actually needed to keep commit 67aea58. First, use git reflog to confirm that commit you want to restore and then run git cherry-pick <commit>:</p>
+<pre><code>git reflog
+13bea0e HEAD@{0}: reset: moving to 13bea0e
+67aea58 HEAD@{1}: commit: some work
+
+git cherry-pick 67aea58
+ [main 67aea58] some work
+ Date: Thu Oct 13 11:51:19 2016 -0700
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test4.txt
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,762 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../devenv/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>Overview - Yati Technical Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#yati-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Yati Technical Documentation" class="md-header__button md-logo" aria-label="Yati Technical Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yati Technical Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Yati Technical Documentation" class="md-nav__button md-logo" aria-label="Yati Technical Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yati Technical Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licences.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yati-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yati Architecture Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Yati Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-codebases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Codebases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-assumptions-and-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Assumptions and Concepts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flutter-and-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flutter and APIs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Directory Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-folders-and-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Folders and Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lib-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lib Folder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devenv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development Environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitguide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitguide2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pull Requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing to Yati
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-manual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User-manual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#licences" class="md-nav__link">
+    <span class="md-ellipsis">
+      Licences.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#yati-architecture-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Yati Architecture Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Yati Architecture Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-codebases" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Codebases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#usage-assumptions-and-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage Assumptions and Concepts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Components
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flutter-and-apis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Flutter and APIs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Directory Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-folders-and-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Core Folders and Files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lib-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lib Folder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="yati-overview"><strong>Yati Overview</strong></h1>
+<p>Yati is mobile application built using the Flutter Framework. It is designed to provide answers to questions about services provided by governement ministries and their departments.</p>
+<h2 id="getting-started"><strong>Getting Started</strong></h2>
+<ul>
+<li>
+<p><strong>Contributing code.</strong> Check out our guide for new contributors to get started. We have invested in making Yati code highly readable, thoughtfully tested, and easy to modify. Beyond that, we encourage contributors to follow our guidelines on documentation to ensure everything changed is documented.</p>
+</li>
+<li>
+<p><strong>Contributing non-code.</strong> Reporting an issue and give us feedback. We’d love to hear from you, whether you want to contribute to Yati or are just trying it out for the first time.</p>
+</li>
+<li>
+<p><strong>Checking Yati out.</strong> The best way to expireance and use Yati is to download and install Yati App APK. We also recommend joining and following our communities to ask any questions.</p>
+</li>
+</ul>
+<p>You may also be interested in following us on <a href="">Twitter</a> and <a href="">LinkedIn</a>.</p>
+<h2 id="licences"><strong>Licences.</strong></h2>
+<p>Yati is distributed under the <a href="">Apache 2.0 license.</a>
+To learn more about Yati's distribution license, follow this <a href="">link</a></p>
+<h2 id="yati-architecture-overview"><strong>Yati Architecture Overview</strong></h2>
+<h3 id="key-codebases"><strong>Key Codebases</strong></h3>
+<p>The main Yati codebase is at <a href="">https://github.com/Fanelemenzi/Yati</a>. Iit contains all the frontend and backend code for the Yati Mobile App.</p>
+<p>Yati Mobile app is a mobile app built on with the flutter framework supporting both iOS and Andriod written with Python and HTML to support some app functions.</p>
+<h3 id="usage-assumptions-and-concepts"><strong>Usage Assumptions and Concepts</strong></h3>
+<p>Yati is a information application provide answers to questions about services and products provided by the Eswatini Government. Information is structured in form of FAQs with answers. It is divided by deaprtments with each department getting its own set of questions and answers.</p>
+<h3 id="architecture-components"><strong>Architecture Components</strong></h3>
+<h3 id="flutter-and-apis"><strong>Flutter and APIs</strong></h3>
+<p>Yati's is primarily implemented in the Flutter cross platform framework with APIs calling data stored on a codebase.</p>
+<p>Flutter with dart provides the UI of the application and backend logic allowing/providing functionality to the application UI. The API provide the backend functionality by getting data from database.</p>
+<h2 id="directory-structure"><strong>Directory Structure</strong></h2>
+<p>This page documents the Yati directory structure, where to find things, and how to decide where to put a file.</p>
+<h3 id="core-folders-and-files"><strong>Core Folders and Files</strong></h3>
+<p>Yati uses the Flutter crossplartform framework, some of this path are default packages and folders coming with the flutter framework.
+Folders and Files that can be changed are the working part of the project are expanded and explains in great detail further down this section. These are [lib], [Docs], [pubspec.yaml].</p>
+<ul>
+<li><code>yati/.dart_tool</code> - This folder comes with dart version 2 and used by pub and other tools. It replaced the .pub directory.</li>
+<li><code>yati/andriod</code> - This folder contains native andriod code. Most of the time you dont need to change anything inside this folder but of you want to intercat with low level functions (eg. camera, bluetooth, gps) you need to edit this folder.</li>
+<li><code>yati/assets</code> - This folder contains assests used throughout the project such images, videos, icons and more</li>
+<li><code>yati/Docs</code> - this is the documentation folder that contains all the files dealing with the documentation of any changes in the development of the Yati app.</li>
+<li><code>yati/ios</code> - this folder contains native iOS code.</li>
+<li><code>yati/lib</code> - This is the folder where we will be mostly hanging around in because we will write our Flutter code into this folder. By default lib folder contians only the <code>main.dart</code> file. The <code>main.dart</code> file is like the a car ignition becuase the app starts running from the <code>main.dart</code> file. The folder structure inside lib is important for organizing and managing the application.</li>
+<li><code>yati/linux</code> - Same as andriod folder, contians native code to run application on Linux software </li>
+<li><code>yati/macos</code> - Folder contains native code torun software on MacOS operating systems.</li>
+<li><code>yati/test</code> - This is the folder where we will write our test for the application.</li>
+<li><code>yati/web</code> - This folder contains code to run the application on web browsers</li>
+<li><code>yati/windows</code> - This folder contains native code that allows app to run on windows OS.</li>
+<li><code>yati/.readthedocs.yaml</code> - file that allows for the app documentation to be hosted on ReadTheDocs.</li>
+<li><code>yati/.analysis_options/yaml</code> - This is a file configuration which configures Dart analyzer which checks all your code and if your code has any conflict with the configurations you wrote then IDE gives an error or warning.</li>
+<li><code>yati/pubspec.lock</code> - This file contains all the packages versions, dependency and description informations used in the project. Purpose is to keep the app packages locked in the same library version so if wwe run the app in different computers we dont have to struggle with code issue caused from different package versions.</li>
+<li><code>yati/pubspec.yaml</code> - This file controls app name, SDK version, packages, dependencies and assets. If you want to add new packages to your project you need to add the package name under dependencies section. </li>
+<li><code>yati/READMe.md</code> - This is the default markdown file containing resources to get started into Flutter for beginners.</li>
+</ul>
+<h3 id="lib-folder"><strong>Lib Folder</strong></h3>
+<ol>
+<li><code>yati/lib/Constants/</code> contains constant static files that do not during the function of the project. This files are non-volatile. In this folder there is the <ul>
+<li><code>../lib/Constants/department.dart</code> contains a class containing a list of strings used to label all the departments used throughout the codebase.</li>
+<li><code>..lib/Constants/ministries.dart</code> contains a class containing a list of strings used to label all the minitries in the codebase.</li>
+</ul>
+</li>
+<li><code>yati/lib/dep_pages</code> folder contains folders with the business logic for eachof the departments FAQs<ul>
+<li><code>../dep_pages/Deputy PM Office/</code> contains the <code>social_welfare_department.dart</code> file that runs the business logic of the <strong>social welfare department FAQs</strong>.</li>
+<li><code>../dep_pages/Ministry of Agriculture</code> contains the <code>vet_livestock_production.dart</code> file which controls the logic for the <strong>vet livestock production department FAQs</strong>.</li>
+<li><code>../dep_pages/Ministry of Commerce</code> contains the <code>cooperative_development.dart</code>, <code>Liquor_department.dart</code> and the <code>regristrar_of_companies.dart</code> files that control the logic of the <strong>Cooperative Development FAQs</strong>, the <strong>Liqour Department FAQs</strong> and the <strong>Regristrar of Companies FAQs</strong>.</li>
+<li><code>../dep_pages/Ministry of Home Affairs</code> contains the <code>home_affairs.dart</code> file which controls the logic and function of the <strong>Home Affairs Department FAQs</strong>.</li>
+<li><code>../dep_pages/Ministry of Labour</code> contains the <code>Industrial_and_Vocational_training.dart</code> and the <code>scholarship.dart</code> files which control the functioning and business logic for the <strong>Industrial and Vocational Training Department FAQs</strong> and the <strong>Scholarship Department FAQs</strong>.</li>
+</ul>
+</li>
+<li><code>yati/lib/Screens/</code> folder contains the files that controls and renders the presentation layer for the app that users interact with.<ul>
+<li><code>yati/Screens/about.dart</code> This dart file renders the about page in the application.</li>
+<li><code>yati/Screens/most_used.dart</code> This dart file renders the Most Used page in the application.</li>
+<li><code>yati/Screens/profile.dart</code> This file renders the profile page on the application.</li>
+<li><code>yati/Screens/welcome_page.dart</code> This file renders the welcome page which is the first page user interacts with.</li>
+</ul>
+</li>
+<li><code>yati/lib/bottom_navbar.dart</code> controls and renders the bottom navigation bar of the application.</li>
+<li><code>yati/lib/opening_screen.dart</code> controls and renders the opening screens with runs for 5 seconds before the welcome page.</li>
+<li><code>yati/lib/main.dart</code> the file where the application starts running. Its controls the whole rendering of the application.</li>
+</ol>
+<h3 id="documentation"><strong>Documentation</strong></h3>
+<p><code>/Docs/</code> This folder contains all the application documentation files that are used to track any changes made to the project.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>

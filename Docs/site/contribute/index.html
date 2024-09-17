@@ -1,0 +1,646 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../gitguide2/">
+      
+      
+        <link rel="next" href="../user-manual/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.33">
+    
+    
+      
+        <title>Contributing to Yati - Yati Technical Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#contributing-to-yati-project" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Yati Technical Documentation" class="md-header__button md-logo" aria-label="Yati Technical Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Yati Technical Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Contributing to Yati
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Yati Technical Documentation" class="md-nav__button md-logo" aria-label="Yati Technical Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Yati Technical Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../devenv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Development Environment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitguide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Git Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitguide2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Pull Requests
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Contributing to Yati
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Contributing to Yati
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contribution-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contribution Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contribution Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zulip-development-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zulip development community
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ways-to-contribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ways to contribute
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-codebase-contribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your first codebase contribution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-look-for-an-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to look for an issue
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Where to look for an issue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#picking-an-issue-to-work-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Picking an issue to work on
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../user-manual/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    User-manual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contribution-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contribution Guide
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Contribution Guide">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zulip-development-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zulip development community
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ways-to-contribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ways to contribute
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#your-first-codebase-contribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      Your first codebase contribution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-look-for-an-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to look for an issue
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Where to look for an issue">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#picking-an-issue-to-work-on" class="md-nav__link">
+    <span class="md-ellipsis">
+      Picking an issue to work on
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="contributing-to-yati-project"><strong>Contributing to Yati Project</strong></h1>
+<p>Welcome to the Yati community. We happy and excited you choose us for oyur open source contribution.</p>
+<h2 id="contribution-guide"><strong>Contribution Guide</strong></h2>
+<h3 id="zulip-development-community"><strong>Zulip development community</strong></h3>
+<p>The primary communication forum for the Yati project is the discord server hosted at discord.com:</p>
+<p><strong>Users and administrators</strong> of the Yati project stop by to ask questions, offer feedback, and participate in product design discussions.
+<strong>Contributors to the project</strong>, including the core Yati project team, discuss ongoing and future projects, brainstorm ideas, and generally help each other out.</p>
+<p>Everyone is welcome to sign up and participate — we love hearing from our users! Public streams in the community receive thousands of messages a week.</p>
+<p>To learn how to get started participating in the community, including community norms and where to post, check out our <a href="../devenv/">Yati development community guide</a>. The Yati project community is governed by a <a href="">code of conduct</a>.</p>
+<h3 id="ways-to-contribute"><strong>Ways to contribute</strong></h3>
+<p>To make a code or documentation contribution, read our step-by-step guide to <a href="../overview/">getting started</a> with the Zulip codebase. A small sample of the type of work that needs doing:</p>
+<ul>
+<li>Bug squashing and feature development on our Python/Django backend, web frontend, Flutter mobile app in beta, or Electron desktop app.</li>
+<li>Building out our Python API and bots framework.</li>
+<li>Writing an integration.</li>
+<li>Improving our user or developer documentation.</li>
+<li>Reviewing code and manually testing pull requests.</li>
+</ul>
+<p>Non-code contributions: Some of the most valuable ways to contribute don’t require touching the codebase at all. For example, you can:</p>
+<ul>
+<li>Report issues, including both feature requests and bug reports.</li>
+<li>Give feedback if you are evaluating or using Yati.</li>
+<li>Participate thoughtfully in design discussions.</li>
+</ul>
+<h2 id="your-first-codebase-contribution"><strong>Your first codebase contribution</strong></h2>
+<p>This section has a step by step guide to starting as a Yati codebase contributor. It’s long, but don’t worry about doing all the steps perfectly; no one gets it right the first time, and there are a lot of people available to help.</p>
+<ul>
+<li>First, make an account on the Yati discord server, paying special attention to the community norms. If you’d like, introduce yourself in <code>#new members</code> channel, using your name as the topic. Bonus: tell us about your first impressions of Yati, and anything that felt confusing/broken or interesting/helpful as you started using the product.</li>
+<li>Read What makes a great Zulip contributor.</li>
+<li>
+<p>Set up the development environment for the Zulip codebase you want to work on, and start getting familiar with the code.
+    <strong>For the server and web app:</strong></p>
+<ol>
+<li>Install the <a href="../devenv/">development environment</a>, getting help in #provision help if you run into any troubles.</li>
+<li>Familiarize yourself with using the development environment.</li>
+<li>Go through the new application feature tutorial to get familiar with how the Yati codebase is organized and how to find code in it.</li>
+</ol>
+</li>
+</ul>
+<p>Read the Zulip <a href="../gitguide/">guide to Git</a> if you are unfamiliar with Git or Yati’s rebase-based Git workflow, getting help in <code>#git help</code> if you run into any troubles. Even Git experts should read the Yati-specific Git tools page.</p>
+<h2 id="where-to-look-for-an-issue"><strong>Where to look for an issue</strong></h2>
+<p>Now you’re ready to pick your first issue! Yati has several repositories you can check out, depending on your interests. There are hundreds of open issues in the main <a href="">Yati repository</a>.</p>
+<p>You can look through issues tagged with the <code>“help wanted”</code> label, which is used to indicate the issues that are ready for contributions. Some repositories also use the <code>“good first issue”</code> label to tag issues that are especially approachable for new contributors.</p>
+<h3 id="picking-an-issue-to-work-on"><strong>Picking an issue to work on</strong></h3>
+<p>There’s a lot to learn while making your first pull request, so start small! Many first contributions have fewer than 10 lines of changes (not counting changes to tests).</p>
+<p>We recommend the following process for finding an issue to work on:</p>
+<ul>
+<li>Read the description of an issue tagged with the “help wanted” label and make sure you understand it.</li>
+<li>If it seems promising, poke around the product (on discord server or in the Github comments) until you know how the piece being described fits into the bigger picture. If after some exploration the description seems confusing or ambiguous, post a question on the GitHub issue, as others may benefit from the clarification as well.</li>
+<li>When you find an issue you like, try to get started working on it. See if you can find the part of the code you’ll need to modify (git grep is your friend!) and get some idea of how you’ll approach the problem.</li>
+<li>If you feel lost, that’s OK! Go through these steps again with another issue. There’s plenty to work on, and the exploration you do will help you learn more about the project.</li>
+</ul>
+<p>Note that you are not claiming an issue while you are iterating through steps 1-4. Before you claim an issue, you should be confident that you will be able to tackle it effectively.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.af256bd8.min.js"></script>
+      
+    
+  </body>
+</html>
