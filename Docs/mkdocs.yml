@@ -3,5 +3,10 @@ nav:
   - Home: index.md
   - Overview: overview.md
   - Development Environment: devenv.md
+  - Git Guide: gitguide.md
+  - Pull Requests: gitguide2.md 
+  - Contributing to Yati: contribute.md
+  - User-manual: user-manual.md
+  
 theme: 
     name: material
